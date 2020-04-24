@@ -29,20 +29,3 @@ jobs:
       env:
         MATRIX_CONTEXT: ${{ toJson(matrix) }}
       run: echo "$MATRIX_CONTEXT"
-    - uses: actions/checkout@master
-    - name: Replace tokens
-      uses: cschleiden/replace-tokens@v1
-      with: 
-        files: '["README.md","package.json"]'
-      env:
-        REPO: ${{ github.event.repository.name }}
-        USER_OR_ORG: ${{ github.repository_owner }}
-    - name: Commit files
-      run: |
-        git config --local user.email "joseph@semasim.com"
-        git config --local user.name "garronej"
-        git commit -m "Initial changes to the tamplate, may ${{ github.repository }} thrive ( via GH Action )" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
