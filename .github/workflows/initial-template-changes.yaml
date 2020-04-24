@@ -1,0 +1,30 @@
+name: Initial setup
+on: 
+  create:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Replace repository name
+      uses: jacobtomlinson/gha-find-replace@master
+      with:
+        find: __REPOSITORY_NAME__
+        replace: ${{ github.repository }}
+    - name: Replace user or organization name
+      uses: jacobtomlinson/gha-find-replace@master
+      with: 
+        find: __USER_OR_ORGANIZATION__
+        replace: ${{ github.repository_owner }}
+    - name: Commit files
+      run: |
+        git config --local user.email "joseph@semasim.com"
+        git config --local user.name "garronej"
+        git commit -m "Initial changes to the tamplate, may ${{ github.repository }} thrive ( via GH Action )" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
