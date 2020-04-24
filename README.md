@@ -1,7 +1,5 @@
 # test-repo
 
-hello
+#{REPO}#
 
-${repository_name}
-
-${user_or_organization}
+#{USER_OR_ORG}#
