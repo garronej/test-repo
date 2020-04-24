@@ -1,0 +1,34 @@
+{
+    "name": "[TODO]",
+    "version": "[0.0.1]",
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/garronej/[TODO]"
+    },
+    "main": "./dist/lib/index.js",
+    "types": "./dist/lib/index.d.ts",
+    "scripts": {
+        "tsc": "npx tsc",
+        "test:node": "node ./dist/test/",
+        "test:deno": "deno ./dist/test/deno_index.ts",
+        "test": "npm run test",
+        "denoify": "npx denoify",
+        "build": "npm run tsc && npm run denoify"
+    },
+    "author": "Joseph Garrone",
+    "license": "MIT",
+    "dependencies": {},
+    "files": [
+        "/dist/lib",
+        "/src/lib"
+    ],
+    "keywords": [],
+    "homepage": "https://github.com/garronej/[TODO]",
+    "devDependencies": {
+        "@types/node": "^8.9.1",
+        "denoify": "^0.0.0",
+        "evt": "^1.0.9",
+        "typescript": "^3.8.3"
+    }
+}
