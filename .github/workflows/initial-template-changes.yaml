@@ -12,12 +12,12 @@ jobs:
     - name: Replace repository name
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: _REPOSITORY_NAME_
+        find: "${repository_name}"
         replace: ${{ github.repository }}
     - name: Replace user or organization name
       uses: jacobtomlinson/gha-find-replace@master
       with: 
-        find: _USER_OR_ORGANIZATION_
+        find: "${user_or_organization}"
         replace: ${{ github.repository_owner }}
     - name: Commit files
       run: |
