@@ -1,5 +1,5 @@
 # test-repo
 
-<REPOSITORY_NAME>
+${repository_name}
 
-<USER_OR_ORGANIZATION>
+${user_or_organization}
