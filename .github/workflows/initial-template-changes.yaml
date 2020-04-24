@@ -39,7 +39,7 @@ jobs:
         files: '["README.md","package.json"]'
       env:
         REPO: ${{ github.event.repository.name }}
-        USER_OR_ORG: ${{ github.event.}}
+        USER_OR_ORG: ${{ github.repository }}
     - name: Commit files
       run: |
         git config --local user.email "joseph@semasim.com"
