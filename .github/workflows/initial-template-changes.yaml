@@ -14,11 +14,13 @@ jobs:
       with:
         find: "${repository_name}"
         replace: ${{ github.repository }}
+        include: "README.md"
     - name: Replace user or organization name
       uses: jacobtomlinson/gha-find-replace@master
       with: 
         find: "${user_or_organization}"
         replace: ${{ github.repository_owner }}
+        include: "README.md"
     - name: Commit files
       run: |
         git config --local user.email "joseph@semasim.com"
