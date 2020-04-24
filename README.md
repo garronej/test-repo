@@ -1,5 +1,5 @@
 # test-repo
 
-#{REPO}#
+test-repo
 
-#{USER_OR_ORG}#
+garronej
