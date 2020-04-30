@@ -1,5 +1,5 @@
 name: Initial setup
-on: [push, pull_request,check_run,check_suite,create,delete,deployment,fork,gollum,label]
+on: [push, pull_request,check_run,check_suite,create,delete,deployment,fork,gollum,label,watch]
 
 jobs:
   build:
