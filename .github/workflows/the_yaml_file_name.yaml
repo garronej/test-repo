@@ -1,0 +1,16 @@
+name: the workflow name
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: the step name
+      run: echo hello world
