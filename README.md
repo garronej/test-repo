@@ -28,3 +28,5 @@ commit xy
 oui
 
 non
+
+foo
