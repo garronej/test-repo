@@ -33,5 +33,5 @@ jobs:
     - name: Test passing json 
       uses: actions/hello-world-javascript-action@master
       with:
-        who-to-greet: ${{format('{{"from_version":"{0}","to_version":"{1}"}}','0.0.2','0.0.1')}}
+        who-to-greet: ${{format('{{"from_version":"{0}","to_version":"{1}"}}',github.before,'0.0.1')}}
        
