@@ -30,3 +30,8 @@ jobs:
       env:
         MATRIX_CONTEXT: ${{ toJson(matrix) }}
       run: echo "$MATRIX_CONTEXT"
+    - name: Test passing json 
+      uses: actions/hello-world-javascript-action@master
+      with:
+        who-to-greet: ${{format('{{"from_version":"{0}","to_version":"{1}"}}','0.0.2','0.0.1')}}
+       
